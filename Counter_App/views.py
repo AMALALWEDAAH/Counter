@@ -10,7 +10,7 @@ def index(request):
 
 def visitnumber(request):
     visitnumber=request.session.get('visitnumber',0)
-    request.session['visitnumber'] = visitnumber + 1
+    request.session['visitnumber'] += 1
     context={
         'visitnumber':visitnumber,
     }
